@@ -26,7 +26,6 @@ export default async function PagesLayout({ children, params: { locale } }) {
 
   return (
     <div>
-      {/* <Modals /> */}
       <Header
         lang={locale}
         HeaderLogo={HeaderLogo}

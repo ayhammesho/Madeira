@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function NotFound() {
   return (
-    <>
+    <div>
       <div className="error-page-area default-padding text-center bg-cover">
         {/* <!-- Shape --> */}
         <div
@@ -34,7 +34,7 @@ function NotFound() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

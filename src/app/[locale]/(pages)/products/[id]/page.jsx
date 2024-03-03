@@ -8,23 +8,20 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Link from "next/link";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
-export async function generateMetadata({ params: { locale, id } }) {
-  return {
-    // title: `${seo?.metaTitle}| Madeira`,
-    // description: seo?.metaDescription || "",
-    // keywords: seo?.keywords || "",
-    // openGraph: {
-    //   images: seo?.metaImage?.data?.attributes?.url,
-    // },
-    title: "Madira",
-  };
-}
+// export async function generateMetadata({ params: { locale, id } }) {
+//   return {
+//     // title: `${seo?.metaTitle}| Madeira`,
+//     // description: seo?.metaDescription || "",
+//     // keywords: seo?.keywords || "",
+//     // openGraph: {
+//     //   images: seo?.metaImage?.data?.attributes?.url,
+//     // },
+//     title: "Madira",
+//   };
+// }
 
 function ProductDetailsPage({ params: { locale, id } }) {
   const settings = useMemo(() => {

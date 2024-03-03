@@ -1,7 +1,5 @@
 "use client";
 
-import "bootstrap/dist/js/bootstrap.bundle.min";
-
 const Shop = () => {
   return (
     <div className="validtheme-shop-area default-padding">

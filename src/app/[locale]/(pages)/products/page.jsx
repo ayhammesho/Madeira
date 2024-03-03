@@ -14,11 +14,7 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 async function Products({ params: { locale } }) {
-  return (
-    <>
-      <Shop />
-    </>
-  );
+  return <Shop />;
 }
 
 export default Products;

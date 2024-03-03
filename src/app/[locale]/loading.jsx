@@ -17,9 +17,9 @@ const Loading = ({ children }) => {
     }, 16000);
   }, []);
   return (
-    <>
+    <div>
       <Preloader />
-    </>
+    </div>
   );
 };
 

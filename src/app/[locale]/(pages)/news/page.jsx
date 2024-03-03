@@ -6,40 +6,42 @@ import { notFound } from "next/navigation";
 import Script from "next/script";
 
 export async function generateMetadata({ params: { locale } }) {
-  const aboutPageData = await getBlogPageData(locale);
-  const seo = aboutPageData?.attributes?.seo[0];
+  // const aboutPageData = await getBlogPageData(locale);
+  // const seo = aboutPageData?.attributes?.seo[0];
   // console.log(aboutPageData?.attributes?.seo);
 
   return {
-    title: `${seo?.metaTitle}| Madeira`,
-    description: seo?.metaDescription || "",
-    keywords: seo?.keywords || "",
-    openGraph: {
-      images: seo?.metaImage?.data?.attributes?.url,
-    },
+    //   title: `${seo?.metaTitle}| Madeira`,
+    //   description: seo?.metaDescription || "",
+    //   keywords: seo?.keywords || "",
+    //   openGraph: {
+    //     images: seo?.metaImage?.data?.attributes?.url,
+    //   },
+    // };
+    title: "Madeira",
   };
 }
 
 async function NewsPage({ params: { locale }, searchParams }) {
-  const blogsResponse = await getBlogPageData(
-    locale,
-    searchParams.page || 1,
-    5
-  );
-  const recentBlogsResponse = await getBlogPageData(locale, 1, 3);
-  const blogsData = blogsResponse?.data;
-  const recentBlogs = recentBlogsResponse?.data;
-  const blogsPagination = blogsResponse?.meta?.pagination;
+  // const blogsResponse = await getBlogPageData(
+  //   locale,
+  //   searchParams.page || 1,
+  //   5
+  // );
+  // const recentBlogsResponse = await getBlogPageData(locale, 1, 3);
+  // const blogsData = blogsResponse?.data;
+  // const recentBlogs = recentBlogsResponse?.data;
+  // const blogsPagination = blogsResponse?.meta?.pagination;
 
-  let emptyData = "";
-  if (blogsPagination.pageCount === 0) {
-    emptyData = "our latest news are coming soon";
-  } else if (
-    searchParams.page > blogsPagination.pageCount ||
-    searchParams.page < 1
-  ) {
-    notFound();
-  }
+  // let emptyData = "";
+  // if (blogsPagination.pageCount === 0) {
+  //   emptyData = "our latest news are coming soon";
+  // } else if (
+  //   searchParams.page > blogsPagination.pageCount ||
+  //   searchParams.page < 1
+  // ) {
+  //   notFound();
+  // }
 
   return (
     <div>
