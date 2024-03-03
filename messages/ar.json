@@ -1,0 +1,88 @@
+{
+  "default": {
+    "last_updated": "تم التحديث بتاريخ",
+    "Contact": {
+      "page_title": "للحصول على أي معلومات",
+      "page_sub_title": "اتصل بنا",
+      "address": "عنوان الشركة",
+      "Email": "بريد إلكتروني",
+      "email_box": "تواصل معنا عبر البريد الإلكتروني ",
+      "fullName": "الاسم الكامل",
+      "location": "موقع",
+      "message": "رؤوس أقلام",
+      "optional": "خياري",
+      "phonenumber": "رقم الهاتف",
+      "phonenumber_box": "رقم هاتف الشركة",
+      "send": "لقد تم تسليم رسالتك بنجاح، وسوف نتواصل معك في أقرب وقت ممكن",
+      "subject": "موضوع",
+      "submit": "أرسل الآن",
+      "sub_title": "لمعرفة المزيد",
+      "title": "اتصل بنا عبر خط الدعم",
+      "placeholders": {
+        "full_name": "الأسم الكامل",
+        "email": "على سبيل المثال info@example.com",
+        "subject": "الموضوع",
+        "message": "رسالتك",
+        "phone_number": ""
+      },
+      "auth": {
+        "full_name": "يرجى كتابة أسمك الكامل",
+        "email": "العنوان البريد الخاص بك يجب أن يحتوي على @",
+        "subject": "ما الموضوع الذي تتواصل من أجله",
+        "message": "أخبرنا لماذا تتواصل معنا",
+        "phone_number": ""
+      }
+    },
+    "About": {
+      "page_title": "تاريخنا الحافل",
+      "page_sub_title": "من نحن"
+    },
+    "Footer": {
+      "site_map": "صفحات الموقع",
+      "brands": "أجزاء حسب العلامات التجارية",
+      "follow": "تابعنا"
+    },
+    "Gallery": { "title": "معرضنا" },
+    "Header": {
+      "lang": "لغات",
+      "contact_us": "اتصل بنا",
+      "about": "من نحن",
+      "home": "الرئيسية",
+      "news": "أخبار",
+      "products": "منتجات",
+      "privacy_policy": "سياسة الخصوصية"
+    },
+    "Home": {
+      "news_sub_title": "وهنا بعض من الأخبار المميزة منا",
+      "news_title": "آخر الأخبار",
+      "parts_title": "لدينا كل ما تريد",
+      "testimonials": "عملائنا السعداء"
+    },
+    "HowItWorks": { "video": "شاهد الفيديو" },
+    "News": {
+      "page_title": "آخر التحديثات لدينا",
+      "page_sub_title": "الأخبار",
+      "posted_at": "نشر في",
+      "recent_news": "أخر الأخبار",
+      "share": "شارك:",
+      "read_more": "إقرأ المزيد"
+    },
+    "not_found_cta": "العودة إلى الصفحة الرئيسية",
+    "not_found_text": "حدث خطأ ما، صفحة الويب التي يتم عرضها للمستخدم عندما يتعذر على الخادم العثور على الصفحة المطلوبة.",
+    "not_found_title": "عفوًا، لم يتم العثور على الصفحة",
+    "Pagination": { "next": "التالي", "prev": "السابق" },
+    "Products": {
+      "page_title": "منتجات",
+      "page_sub_title": "استكشف القطع الخاصة بنا",
+      "cta": "المزيد من التفاصيل",
+      "more_products": "هناك المزيد من قطع غيار السيارات المتاحة",
+      "more_products_cta": "عرض المزيد",
+      "product_details": "تفاصيل المنتج",
+      "related_products": "منتجات ذات صله"
+    },
+    "Privacy Policy": {
+      "page_title": "حقوقك والحماية",
+      "page_sub_title": "سياسة الخصوصية"
+    }
+  }
+}

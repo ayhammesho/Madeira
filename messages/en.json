@@ -1,0 +1,88 @@
+{
+  "default": {
+    "last_updated": "Last Updated",
+    "Contact": {
+      "page_title": "For Any Information",
+      "page_sub_title": "Contact Us",
+      "address": "Company Address",
+      "Email": "Email",
+      "email_box": "Email Now",
+      "fullName": "Full Name",
+      "location": "Location",
+      "message": "Short Notes",
+      "optional": "Optional",
+      "phonenumber": "Phone Number",
+      "phonenumber_box": "Company Phone Number",
+      "send": " Your Message has been delivered successfuly we will contact you as soon as we can",
+      "subject": "Subject",
+      "submit": "Submit Now",
+      "sub_title": "To Know More",
+      "title": "Contact Us With Support Line",
+      "placeholders": {
+        "full_name": "Jackson Mile",
+        "email": "Ex- info@example.com",
+        "subject": "Subject",
+        "message": "Write Something...",
+        "phone_number": "Ex- +880 13* ** ***"
+      },
+      "auth": {
+        "full_name": "Please Enter Your Full Name",
+        "email": "your email should be like info@example.com",
+        "subject": "Please Add Subject to the message",
+        "message": "Tell us why you contact us",
+        "phone_number": ""
+      }
+    },
+    "About": {
+      "page_title": "Our Brief History",
+      "page_sub_title": "About Us"
+    },
+    "Footer": {
+      "site_map": "Site Pages",
+      "brands": "Parts By Brands",
+      "follow": "Follow Us"
+    },
+    "Gallery": { "title": "Our Gallery" },
+    "Header": {
+      "lang": "lang",
+      "contact_us": "Contact Us",
+      "about": "About Us",
+      "home": "Home",
+      "blog": "Blog",
+      "products": "Products",
+      "privacy_policy": "Privacy Policy"
+    },
+    "Home": {
+      "news_sub_title": "Here are some of the featured news from us",
+      "news_title": "The Latest News",
+      "parts_title": "We have every thing you want",
+      "testimonials": "Our Happy Clients"
+    },
+    "HowItWorks": { "video": "Watch Video" },
+    "News": {
+      "page_title": "Our Latest Updates",
+      "page_sub_title": "News",
+      "posted_at": "Posted on",
+      "recent_news": "Recent Blog",
+      "share": "Share:",
+      "read_more": "Read More"
+    },
+    "not_found_cta": "Back To Home",
+    "not_found_text": " Something went wrong, web page that is displayed to the user when the server cannot find the requested page.",
+    "not_found_title": "Opps, Page Not Found",
+    "Pagination": { "next": "Next", "prev": "Prev" },
+    "Products": {
+      "page_title": "Products",
+      "page_sub_title": "Explore Our Parts",
+      "cta": "More Details",
+      "more_products": "There are More Car Parts Available",
+      "more_products_cta": "View More",
+      "product_details": "Product Details",
+      "related_products": "Related Products"
+    },
+    "Privacy Policy": {
+      "page_title": "Your Rights and Protections",
+      "page_sub_title": "Privacy Policy"
+    }
+  }
+}
