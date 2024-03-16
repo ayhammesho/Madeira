@@ -1,4 +1,6 @@
 import Script from "next/script";
+// "use client";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale, id } }) {
   return {
@@ -13,6 +15,7 @@ export async function generateMetadata({ params: { locale, id } }) {
 }
 
 async function singleBlogPage({ params: { locale, id } }) {
+  const t = await getTranslations("default");
   // const blogsData = await getSingleBlog(locale, id);
 
   // const blogTitle = blogsData?.attributes?.BlogTitle;
@@ -80,69 +83,14 @@ async function singleBlogPage({ params: { locale, id } }) {
                         </li>
                       </ul>
                     </div>
-                    <p>
-                      Give lady of they such they sure it. Me contained
-                      explained my education. Vulgar as hearts by garret.
-                      Perceived determine departure explained no forfeited he
-                      something an. Contrasted dissimilar get joy you instrument
-                      out reasonably. Again keeps at no meant stuff. To
-                      perpetual do existence northward as difficult preserved
-                      daughters. Continued at up to zealously necessary
-                      breakfast. Surrounded sir motionless she end literature.
-                      Gay direction neglected but supported yet her.
-                    </p>
-                    <p>
-                      New had happen unable uneasy. Drawings can followed
-                      improved out sociable not. Earnestly so do instantly
-                      pretended. See general few civilly amiable pleased account
-                      carried. Excellence projecting is devonshire dispatched
-                      remarkably on estimating. Side in so life past. Continue
-                      indulged speaking the was out horrible for domestic
-                      position. Seeing rather her you not esteem men settle
-                      genius excuse. Deal say over you age from. Comparison new
-                      ham melancholy son themselves.
-                    </p>
+                    <p>{t("Blog.article_page_article_content_TEST")}</p>
+
                     <blockquote>
                       Celebrated share of first to worse. Weddings and any
                       opinions suitable smallest nay. Houses or months settle
                       remove ladies appear. Engrossed suffering supposing he
                       recommend do eagerness.
                     </blockquote>
-                    <p>
-                      Drawings can followed improved out sociable not. Earnestly
-                      so do instantly pretended. See general few civilly amiable
-                      pleased account carried. Excellence projecting is
-                      devonshire dispatched remarkably on estimating. Side in so
-                      life past. Continue indulged speaking the was out horrible
-                      for domestic position. Seeing rather her you not esteem
-                      men settle genius excuse. Deal say over you age from.
-                      Comparison new ham melancholy son themselves.
-                    </p>
-                    <h3>Conduct replied off led whether?</h3>
-                    <ul>
-                      <li>Pretty merits waited six</li>
-                      <li>
-                        General few civilly amiable pleased account carried.
-                      </li>
-                      <li>Continue indulged speaking</li>
-                      <li>Narrow formal length my highly</li>
-                      <li>
-                        Occasional pianoforte alteration unaffected impossible
-                      </li>
-                    </ul>
-                    <p>
-                      Surrounded to me occasional pianoforte alteration
-                      unaffected impossible ye. For saw half than cold. Pretty
-                      merits waited six talked pulled you. Conduct replied off
-                      led whether any shortly why arrived adapted. Numerous
-                      ladyship so raillery humoured goodness received an. So
-                      narrow formal length my highly longer afford oh. Tall neat
-                      he make or at dull ye. Lorem ipsum dolor, sit amet
-                      consectetur adipisicing, elit. Iure, laudantium, tempore.
-                      Autem dolore repellat, omnis quam? Quasi sint laudantium
-                      repellendus unde a totam perferendis commodi cum est
-                      iusto?
-                    </p>
                   </div>
                 </div>
 
@@ -155,30 +103,21 @@ async function singleBlogPage({ params: { locale, id } }) {
                     <h4>
                       <a href="#">Md Sohag</a>
                     </h4>
-                    <p>
-                      Grursus mal suada faci lisis Lorem ipsum dolarorit more
-                      ametion consectetur elit. Vesti at bulum nec at odio aea
-                      the dumm ipsumm ipsum that dolocons rsus mal suada and
-                      fadolorit to the consectetur elit. All the Lorem Ipsum
-                      generators on the Internet tend. Entire its the did figure
-                      wonder off. sportsmen zealously arranging to the main
-                      pint. Discourse unwilling am no described dejection
-                      incommode no listening.
-                    </p>
+                    <p>{t("Blog.article_page_author_info_TEST")}</p>
                   </div>
                 </div>
                 {/* <!-- Post Author --> */}
 
                 {/* <!-- Post Tags Share --> */}
                 <div className="post-tags share">
-                  <div className="tags">
+                  {/* <div className="tags">
                     <h4>Tags: </h4>
                     <a href="#">Feeds</a>
                     <a href="#">We Specilaized</a>
-                  </div>
+                  </div> */}
 
                   <div className="social">
-                    <h4>Share:</h4>
+                    <h4>{t("Blog.article_page_share")}</h4>
                     <ul>
                       <li>
                         <a className="facebook" href="#" target="_blank">
@@ -207,7 +146,7 @@ async function singleBlogPage({ params: { locale, id } }) {
                 {/* <!-- Post Tags Share --> */}
 
                 {/* <!-- Start Post Pagination --> */}
-                <div className="post-pagi-area">
+                <div className="post-pagi-area" dir="ltr">
                   <div className="post-previous">
                     <a href="#">
                       <div className="icon">
@@ -215,14 +154,16 @@ async function singleBlogPage({ params: { locale, id } }) {
                       </div>
                       <div className="nav-title">
                         {" "}
-                        Previus Post <h5>Discovery incommode</h5>
+                        {t("Blog.article_page_pagi_prev")}
+                        <h5>Discovery incommode</h5>
                       </div>
                     </a>
                   </div>
                   <div className="post-next">
                     <a href="#">
                       <div className="nav-title">
-                        Next Post <h5>Discovery incommode</h5>
+                        {t("Blog.article_page_pagi_next")}
+                        <h5>Discovery incommode</h5>
                       </div>
                       <div className="icon">
                         <i className="fas fa-angle-double-right"></i>

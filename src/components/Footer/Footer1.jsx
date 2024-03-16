@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import logoWhite from "@/../public/assets/img/logo-white.png";
 import footerShape from "@/../public/assets/img/shape/7.png";
 import footerShapeSecond from "@/../public/assets/img/shape/8.png";
+
 function Footer1({
   lang,
   categories,
@@ -298,28 +299,33 @@ function Footer1({
             <div className="col-lg-4 col-md-6 item">
               <div className="footer-item about">
                 <img className="logo" src={logoWhite.src} alt="Logo" />
-                <p>
-                  Happen active county. Winding morning ambition shyness evident
-                  to poor. Because elderly new to the point to main success.
-                </p>
+                <p>{t("Footer.about")}</p>
               </div>
             </div>
 
             <div className="col-lg-2 col-md-6 item">
               <div className="footer-item link">
-                <h4 className="widget-title">Explore</h4>
+                <h4 className="widget-title"> {t("Footer.explore")}</h4>
                 <ul>
-                  <li>
-                    <a href="/en/about-us">About Us</a>
+                  <li className="">
+                    <Link legacyBehavior href={`/${lang}/about-us`}>
+                      {t("Header.about")}
+                    </Link>
                   </li>
-                  <li>
-                    <a href="/en/products">Products</a>
+                  <li className="">
+                    <Link legacyBehavior href={`/${lang}/products`}>
+                      {t("Header.products")}
+                    </Link>
                   </li>
-                  <li>
-                    <a href="/en/news">Blog</a>
+                  <li className="">
+                    <Link legacyBehavior href={`/${lang}/news`}>
+                      {t("Header.blog")}
+                    </Link>
                   </li>
-                  <li>
-                    <a href="/en/contact">Contact Us</a>
+                  <li className="">
+                    <Link legacyBehavior href={`/${lang}/contact`}>
+                      {t("Header.contact_us")}
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -369,7 +375,7 @@ function Footer1({
 
             <div className="col-lg-3 col-md-6 item">
               <div className="footer-item contact">
-                <h4 className="widget-title">Contact Info</h4>
+                <h4 className="widget-title"> {t("Footer.contact_info")}</h4>
                 <ul>
                   <li>
                     <div className="icon">
@@ -388,7 +394,7 @@ function Footer1({
                       </i>
                     </div>
                     <div className="content">
-                      <strong>Facebook:</strong>
+                      <strong>{t("Footer.facebook")}</strong>
                       <p>Madeira</p>
                     </div>
                   </li>
@@ -409,7 +415,7 @@ function Footer1({
                       </i>
                     </div>
                     <div className="content">
-                      <strong>Instagram:</strong>
+                      <strong>{t("Footer.instagram")}</strong>
                       <p>@Madeira</p>
                     </div>
                   </li>
@@ -419,7 +425,7 @@ function Footer1({
                       <i className="fas fa-envelope"></i>
                     </div>
                     <div className="content">
-                      <strong>Email:</strong>
+                      <strong>{t("Footer.email")}</strong>
                       <a href="mailto:info@madeira.ae">info@madeira.ae</a>
                     </div>
                   </li>
@@ -428,8 +434,10 @@ function Footer1({
                       <i className="fas fa-phone"></i>
                     </div>
                     <div className="content">
-                      <strong>Phone:</strong>
-                      <a href="tel:+971 000 000 000">+971 000 000 000</a>
+                      <strong>{t("Footer.phone")}</strong>
+                      <a dir="ltr" href="tel:+971 000 000 000">
+                        +971 000 000 000
+                      </a>
                     </div>
                   </li>
                 </ul>
@@ -451,7 +459,8 @@ function Footer1({
           <div className="row">
             <div className="col-lg-12">
               <p>
-                &copy; Copyright 2024. All Rights Reserved by{" "}
+                {t("Footer.copyritghts")}
+
                 <a href="https://www.codevay.com/">Codevay</a>
               </p>
             </div>

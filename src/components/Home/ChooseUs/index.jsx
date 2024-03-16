@@ -3,8 +3,10 @@
 import $ from "jquery";
 import { useEffect } from "react";
 import "magnific-popup/dist/jquery.magnific-popup.min.js";
+import { useTranslations } from "next-intl";
 
 const ChooseUs = () => {
+  const t = useTranslations("default");
   useEffect(() => {
     $(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({
       type: "iframe",
@@ -267,36 +269,23 @@ const ChooseUs = () => {
           <div className="col-xl-6 col-lg-6 pr-100 pr-md-15 pr-xs-15 pb-120 pb-md-60 pb-xs-60">
             <ul className="list-simple text-light">
               <li>
-                <h4>Always Fresh</h4>
-                <p>
-                  Continued at up to zealously necessary breakfast. Surrounded
-                  sir motionless she end literature. Gay direction neglected but
-                  supported yet her reprehenderit quaerat deleniti eaque
-                  similique id.
-                </p>
+                <h4>{t("Home.choose_us_list_title_1")}</h4>
+                <p>{t("Home.choose_us_list_desc_1")}</p>
               </li>
               <li>
-                <h4>All organic</h4>
-                <p>
-                  Continued at up to zealously necessary breakfast. Surrounded
-                  sir motionless she end literature. Gay direction neglected but
-                  supported.
-                </p>
+                <h4> {t("Home.choose_us_list_title_2")}</h4>
+                <p>{t("Home.choose_us_list_desc_2")}</p>
               </li>
               <li>
-                <h4>Eco friendly </h4>
-                <p>
-                  Montinued at up to zealously necessary breakfas is motionless
-                  she end literature. Gay direction neglected but supported yet
-                  her.
-                </p>
+                <h4>{t("Home.choose_us_list_title_3")} </h4>
+                <p>{t("Home.choose_us_list_desc_3")}</p>
               </li>
             </ul>
           </div>
-          <div className="col-xl-5 offset-xl-1 col-lg-6">
+          <div className="col-xl-5  col-lg-6">
             <div className="choose-us-style-two-content">
-              <h4 className="sub-title">Why CHoose Us</h4>
-              <h2 className="title">Growing Feeds and raising livestock. </h2>
+              <h4 className="sub-title"> {t("Home.choose_us_subtitle")}</h4>
+              <h2 className="title"> {t("Home.choose_us_title")} </h2>
               <div className="choose-us-style-two-info">
                 <div className="content">
                   <div className="fun-fact">
@@ -306,7 +295,9 @@ const ChooseUs = () => {
                       </div>
                       <div className="operator">K</div>
                     </div>
-                    <span className="medium">Trusted Customers</span>
+                    <span className="medium">
+                      {t("Home.choose_us_counter_title_1")}{" "}
+                    </span>
                   </div>
                   <div className="fun-fact">
                     <div className="counter">
@@ -315,7 +306,9 @@ const ChooseUs = () => {
                       </div>
                       <div className="operator">M</div>
                     </div>
-                    <span className="medium">Growth Tonns of Products</span>
+                    <span className="medium">
+                      {t("Home.choose_us_counter_title_2")}{" "}
+                    </span>
                   </div>
                 </div>
                 <div className="thumb">

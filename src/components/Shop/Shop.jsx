@@ -1,6 +1,8 @@
 "use client";
+import { useTranslations } from "next-intl";
 
 const Shop = () => {
+  const t = useTranslations("default");
   return (
     <div className="validtheme-shop-area default-padding">
       <div className="container">
@@ -42,7 +44,7 @@ const Shop = () => {
               </div>
             </div>
 
-            <div className="col-lg-5 text-right">
+            {/* <div className="col-lg-5 text-right">
               <p>Showing 1–10 of 47 results</p>
               <select name="cars" id="cars">
                 <option value="volvo">Short by latest</option>
@@ -50,7 +52,7 @@ const Shop = () => {
                 <option value="mercedes">Short by Popular</option>
                 <option value="audi">Short by Relevant</option>
               </select>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="row">
@@ -72,7 +74,7 @@ const Shop = () => {
                   <li className="product">
                     <div className="product-contents">
                       <div className="product-image">
-                        <a href="/en/products/1">
+                        <a href={`/${lang}/products/1`}>
                           <img
                             src="../assets/img/demo/chook-feed.webp"
                             alt="Product"
@@ -82,7 +84,7 @@ const Shop = () => {
                           <ul>
                             <li className="quick-view">
                               <a href="#">
-                                <span>Quick view</span>
+                                <span>{t("Shop.quick_view")}</span>
                               </a>
                             </li>
                           </ul>
@@ -94,11 +96,12 @@ const Shop = () => {
                           <a href="#">Organic</a>
                         </div>
                         <h4 className="product-title">
-                          <a href="/en/products/1">Alfalfa</a>
+                          <a href={`/${locale}/products/1`}>Alfalfa</a>
                         </h4>
 
-                        <a href="/en/products/1" className="cart-btn">
-                          <i className="fas fa-eye"></i> View Product
+                        <a href={`/${locale}/products/1`} className="cart-btn">
+                          <i className="fas fa-eye"></i>
+                          {t("Shop.cta")}
                         </a>
                       </div>
                     </div>
@@ -123,7 +126,7 @@ const Shop = () => {
                       <div className="row align-center">
                         <div className="col-lg-5 col-md-5">
                           <div className="product-image">
-                            <a href="/en/products/1">
+                            <a href={`/${locale}/products/1`}>
                               <img
                                 src="../assets/img/demo/chook-feed.webp"
                                 alt="Product"
@@ -138,11 +141,14 @@ const Shop = () => {
                               <a href="#">Organic</a>
                             </div>
                             <h4 className="product-title">
-                              <a href="/en/products/1">Alfalfa</a>
+                              <a href={`/${locale}/products/1`}>Alfalfa</a>
                             </h4>
 
-                            <a href="/en/products/1" className="cart-btn">
-                              <i className="fas fa-eye"></i> View Product
+                            <a
+                              href={`/${locale}/products/1`}
+                              className="cart-btn"
+                            >
+                              <i className="fas fa-eye"></i> {t("Shop.cta")}
                             </a>
                           </div>
                         </div>
@@ -158,7 +164,7 @@ const Shop = () => {
 
             {/* <!-- Pgination --> */}
             <nav className="woocommerce-pagination">
-              <ul className="page-numbers">
+              <ul className="page-numbers" dir="ltr">
                 <li>
                   <a className="previous page-numbers" href="#">
                     <i className="fas fa-angle-left"></i>

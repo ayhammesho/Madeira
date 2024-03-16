@@ -4,6 +4,8 @@ import Pagination from "@/components/News/Pagination";
 import { getBlogPageData } from "@/app/libs/getData";
 import { notFound } from "next/navigation";
 import Script from "next/script";
+// "use client";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
   // const aboutPageData = await getBlogPageData(locale);
@@ -23,6 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
 }
 
 async function NewsPage({ params: { locale }, searchParams }) {
+  const t = await getTranslations("default");
   // const blogsResponse = await getBlogPageData(
   //   locale,
   //   searchParams.page || 1,
@@ -73,7 +76,7 @@ async function NewsPage({ params: { locale }, searchParams }) {
                     </div>
                     <h3 className="post-title">
                       <a href="news/Announcing if attachment resolution sentiments.">
-                        Announcing if attachment resolution sentiments.
+                        {t("Blog.blog_page_article_title")}
                       </a>
                     </h3>
                   </div>
@@ -86,7 +89,7 @@ async function NewsPage({ params: { locale }, searchParams }) {
           <div className="row">
             <div className="col-md-12 pagi-area text-center">
               <nav aria-label="navigation">
-                <ul className="pagination">
+                <ul className="pagination" dir="ltr">
                   <li className="page-item">
                     <a className="page-link" href="#">
                       <i className="fas fa-angle-double-left"></i>

@@ -2,11 +2,14 @@
 
 import React, { useEffect } from "react";
 import $ from "jquery";
-import "jquery-circle-progress/dist/circle-progress.js";
+
 import MapChart from "@/components/MapChart/MapChart";
+import { useTranslations } from "next-intl";
 
 const ChooseUs = () => {
+  const t = useTranslations("default");
   useEffect(() => {
+    require("jquery-circle-progress/dist/circle-progress.js");
     /* ==================================================
 		    _Progressbar Init
 		 ===============================================*/
@@ -60,15 +63,8 @@ const ChooseUs = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 offset-lg-6 pl-60 pl-md-15 pl-xs-15">
-            <h2 className="title">
-              Healthy life with <br /> fresh products
-            </h2>
-            <p>
-              Consume ipsum dolor sit amet consectetur adipisicing elit.
-              Veritatis, illo ullam harum et fuga suscipit quibusdam sapiente.
-              Corrupti ut consequatur magni minus! Iusto eos consectetur
-              similique minus culpa odio temporibus.
-            </p>
+            <h2 className="title">{t("About.choose_us_title")}</h2>
+            <p>{t("About.choose_us_desc")}</p>
             <div className="list-grid">
               <div className="achivement-content">
                 <div className="item">
@@ -77,13 +73,13 @@ const ChooseUs = () => {
                       <strong></strong>
                     </div>
                   </div>
-                  <h4>Organic Solutions</h4>
+                  <h4> {t("About.choose_us_progressbar_title")}</h4>
                 </div>
               </div>
               <ul className="list-item">
-                <li>Biodynamic food</li>
-                <li>Organic gardening</li>
-                <li>Organic food certification</li>
+                <li> {t("About.choose_us_list_1")}</li>
+                <li>{t("About.choose_us_list_2")}</li>
+                <li>{t("About.choose_us_list_3")}</li>
               </ul>
             </div>
           </div>

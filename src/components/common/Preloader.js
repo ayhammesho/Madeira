@@ -26,9 +26,9 @@ const Preloader = ({ onClose }) => {
         if ($("#agrica-preloader").hasClass("loaded")) {
           // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
           $("#preloader")
-            .delay(300)
+            .delay(3000)
             .queue(function () {
-              $(this).remove();
+              $("#preloader").remove();
             });
         }
       });

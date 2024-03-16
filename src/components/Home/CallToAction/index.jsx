@@ -9,10 +9,12 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
-const CallToAction = () => {
+const CallToAction = ({ lang }) => {
+  const t = useTranslations("default");
   const settings = useMemo(() => {
     return {
       // Optional parameters
@@ -44,16 +46,9 @@ const CallToAction = () => {
         <div className="row">
           <div className="col-xl-6 col-lg-12">
             <div className="callto-action text-light">
-              <h2 className="title">Built the best Feeds to the market</h2>
-              <p>
-                We understand that agriculture is not a one-size-fits-all
-                industry, which is why our knowledgeable team is always
-                available to provide personalized support and advice. Whether
-                you're seeking recommendations for the best seed varieties for
-                your region or need guidance on crop rotation and planting
-                techniques, we are here to assist you every step of the way.
-              </p>
-              <a href="en/contact">Contact Us</a>
+              <h2 className="title">{t("Home.call_to_action_title")}</h2>
+              <p>{t("Home.call_to_action_desc")}</p>
+              <a href={`/${lang}/contact`}>{t("Home.call_to_action_cta")}</a>
             </div>
           </div>
           <div className="col-xl-6 col-lg-12">

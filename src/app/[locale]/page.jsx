@@ -53,33 +53,33 @@ function HomePage({ params: { locale } }) {
 
       {/* <!-- Start Banner Area 
     ============================================= --> */}
-      <Banner />
+      <Banner lang={locale} />
       {/* <!-- End Banner --> */}
-      <Feature />
+      <Feature lang={locale} />
 
       {/* <!-- Start Choose Us 
     ============================================= --> */}
-      <ChooseUs />
+      <ChooseUs lang={locale} />
       {/* <!-- End Choose Us --> */}
 
       {/* <!-- Start Service 
     ============================================= --> */}
-      <Services />
+      <Services lang={locale} />
       {/* <!-- End Service --> */}
 
       {/* <!-- Start Timeline 
     ============================================= --> */}
-      <Timeline />
+      <Timeline lang={locale} />
       {/* <!-- End Timeline --> */}
 
       {/* <!-- Start Team 
     ============================================= --> */}
-      <Team />
+      <Team lang={locale} />
       {/* <!-- End Team --> */}
 
       {/* <!-- Start Faq 
     ============================================= --> */}
-      <Faq />
+      <Faq lang={locale} />
       {/* <!-- End Faq --> */}
 
       {/* <!-- Start Gallery 
@@ -89,12 +89,12 @@ function HomePage({ params: { locale } }) {
 
       {/* <!-- Start Call To Action 
     ============================================= --> */}
-      <CallToAction />
+      <CallToAction lang={locale} />
       {/* <!-- End Call To Action --> */}
 
       {/* <!-- Start Blog 
     ============================================= --> */}
-      <Blog />
+      <Blog lang={locale} />
       {/* <!-- End Blog --> */}
       <Footer1
         lang={locale}

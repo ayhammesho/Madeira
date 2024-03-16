@@ -90,14 +90,12 @@ Sidebar heading:  22px 'Outfit', sans-serif
 
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap")
-  @import
-  url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 /* Varialbes */
 :root {
-  --font-default: "Rubik", sans-serif;
-  --font-secondary: "Shadows Into Light Two", cursive;
   --fontawesome: "Font Awesome 5 Pro";
   --black: #000000;
   --dark: #437d21;
@@ -112,6 +110,15 @@ Sidebar heading:  22px 'Outfit', sans-serif
   --box-shadow-regular: 0px 2px 12px 0px #e7e7e7;
   --bg-gray: #e9f1ee;
   --bg-gradient: linear-gradient(97deg, #59a52c 50%, #427623 100%);
+}
+
+*:lang(en) {
+  --font-default: "Rubik", sans-serif;
+  --font-secondary: "Shadows Into Light Two", cursive;
+}
+*:lang(ar) {
+  --font-default: "Tajawal", sans-serif;
+  --font-secondary: "Tajawal", sans-serif;
 }
 
 /* ============================================================== 
@@ -234,7 +241,7 @@ a:focus {
 a:hover {
   outline: none;
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-secondary) ;
   opacity: 1;
 }
 
@@ -9799,5 +9806,226 @@ footer {
   .agrica-preloader .animation-preloader .spinner {
     height: 7em;
     width: 7em;
+  }
+}
+
+.banner-next-button::after {
+  content: "next" !important;
+}
+.banner-prev-button::after {
+  content: "prev" !important;
+}
+
+.banner-style-two .content .animated-btn i:lang(ar) {
+  margin-left: 10px;
+}
+
+.banner-style-two h2 strong:lang(ar) {
+  margin-right: 15px;
+}
+
+.banner-style-two:lang(ar) h2 strong::after {
+  left: -5px;
+  right: auto;
+}
+
+.item-list li:lang(ar) {
+  padding-right: 25px;
+}
+
+.item-list li:lang(ar)::after {
+  left: auto;
+  right: 0;
+}
+
+.choose-us-style-two-area:lang(ar)::after {
+  left: auto;
+  right: 0;
+  top: 0;
+}
+
+.choose-us-style-two-info .thumb:lang(ar) {
+  margin-left: -140%;
+  margin-right: 30px;
+}
+
+.pr-100:lang(ar) {
+  padding-left: 100px;
+  padding-right: 0;
+}
+.pl-100:lang(ar) {
+  padding-right: 100px;
+  padding-left: 0;
+}
+
+ul.list-simple li:lang(ar) {
+  padding-right: 45px;
+  padding-left: auto;
+}
+
+ul.list-simple li:lang(ar)::after {
+  right: 0;
+  left: auto;
+  top: 3px;
+}
+
+.service-style-two-carousel.swiper:hover .swiper-button-prev:lang(ar) {
+  right: 50px;
+  left: auto;
+}
+
+.service-style-two-carousel.swiper:hover .swiper-button-next:lang(ar) {
+  right: auto;
+  left: 50px;
+}
+
+.farmer-style-one-item .thumb .social:lang(ar) {
+  right: 0;
+  left: auto;
+  bottom: 0;
+}
+
+.thumb-style-two h2:lang(ar) {
+  display:none;
+
+}
+
+.call-to-action-area .shape:lang(ar) {
+
+  left: 0;
+right:auto;
+}
+
+
+.footer-item.about:lang(ar) {
+  padding-left: 50px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 20px;
+
+    padding-right: 0px;
+  border-right: 0px solid rgba(255, 255, 255, 0.2);
+  margin-right: 20px;
+
+}
+
+.footer-item.contact li i:lang(ar) {
+
+  margin-left: 20px;
+  margin-right: 0px;
+ 
+}
+
+.about-style-one-thumb .animation-shape:lang(ar) {
+
+  right: -130px;
+  left: auto;
+
+}
+
+
+ul.top-feature:lang(ar) {
+
+  margin-right: -45%;
+  margin-left:auto;
+
+}
+
+.choose-us-style-three-area .shape:lang(ar) {
+
+  right: 0;
+  left:auto;
+
+}
+
+.list-grid .achivement-content:lang(ar) {
+  text-align: right;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 0px solid rgba(255, 255, 255, 0.3);
+}
+
+ul.list-item li:lang(ar) {
+
+  padding-right: 35px;
+  padding-left: auto;
+
+}
+
+ul.list-item li:lang(ar)::after {
+
+  right: 0;
+  left: auto;
+
+}
+
+.shop-listing-contentes .text-right:lang(ar) {
+ justify-content: left;
+}
+
+.shop-listing-contentes .text-right select:lang(ar) {
+  margin-right: 25px;
+  margin-left: 0px;
+}
+
+.cart-btn:lang(ar) {
+  flex-direction: row-reverse;
+
+}
+
+
+.breadcrumb-area .breadcrumb:lang(ar) li::after {
+
+    left: -5px; 
+    right: auto;
+    transform: rotate(180deg);
+  
+}
+
+.contact-area .container .row:lang(ar) {
+  flex-direction: row-reverse;
+}
+
+.form-control:lang(ar) {
+  text-align: right;
+}
+
+.featured-product .product-list-item a:lang(ar) {
+
+
+  justify-content: space-evenly;
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .banner-style-two h2 strong:lang(ar) {
+    margin: 0;
+  }
+
+  .pr-xs-15:lang(ar) {
+    padding-right: 15px;
+    padding-left: 0px;
+  }
+
+  .choose-us-style-two-info .thumb:lang(ar){
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .fun-fact-style-flex:lang(ar) {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  ul.top-feature:lang(ar){
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .sahpe-right-bottom:lang(ar) {
+  
+    left: 0;
+    right: auto;
+ 
+
   }
 }

@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
 
-const Feature = () => {
+import React from "react";
+import { useTranslations } from "next-intl";
+
+const Feature = ({ lang }) => {
+  const t = useTranslations("default");
   return (
     <div
       className="feature-style-one-area default-padding"
@@ -16,26 +20,19 @@ const Feature = () => {
           <div className="col-xl-6 col-lg-6 pl-50 pr-50 pl-md-15 pr-md-15 pl-xs-15 pr-xs-15">
             <div className="feature-style-one-info">
               <h2 className="title">
-                Best Feeds <br /> Agriculture Firms
+                {t("Home.features_title_before_br")}
+                <br /> {t("Home.features_title_after_br")}
               </h2>
-              <p>
-                At Madeira Farm Seeds, we believe in the power of sustainable
-                agriculture. That's why we promote and support practices that
-                prioritize soil health, biodiversity, and environmental
-                stewardship. We strive to source seeds that are produced using
-                sustainable methods, such as organic farming, and we are
-                continually exploring new ways to minimize our ecological
-                footprint.
-              </p>
+              <p>{t("Home.features_desc")}</p>
               <ul className="item-list">
-                <li>Best Quality Standards</li>
-                <li>Natural Healthy Products</li>
+                <li> {t("Home.features_list_1")}</li>
+                <li> {t("Home.features_list_2")} </li>
               </ul>
               <a
                 className="btn btn-theme mt-30 btn-md radius animation"
-                href="en/about-us"
+                href={`${lang}/about-us`}
               >
-                Discover More
+                {t("Home.features_cta")}
               </a>
             </div>
           </div>
@@ -45,7 +42,8 @@ const Feature = () => {
               <div className="product-list-item">
                 <a href="services-details.html">
                   <img src="assets/img/demo/wheat.png" alt="Icon" />
-                  <h5>Wheat</h5>
+
+                  <h5>{t("Home.features_product_1")} </h5>
                 </a>
               </div>
               {/* <!-- End Single Item --> */}
@@ -53,7 +51,7 @@ const Feature = () => {
               <div className="product-list-item">
                 <a href="services-details.html">
                   <img src="assets/img/demo/barley.png" alt="Icon" />
-                  <h5>Barley</h5>
+                  <h5> {t("Home.features_product_2")} </h5>
                 </a>
               </div>
               {/* <!-- End Single Item --> */}
@@ -61,7 +59,7 @@ const Feature = () => {
               <div className="product-list-item">
                 <a href="services-details.html">
                   <img src="assets/img/demo/sesame.png" alt="Icon" />
-                  <h5>Seeds</h5>
+                  <h5> {t("Home.features_product_3")}</h5>
                 </a>
               </div>
               {/* <!-- End Single Item --> */}

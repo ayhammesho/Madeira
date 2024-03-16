@@ -2,8 +2,11 @@
 // import ContactInformation from "@/components/Contact us/ContactInformation";
 // import ContactMap from "@/components/Contact us/ContactMap";
 // import { getGlobalSettings } from "@/app/libs/getData";
+"use client";
+import { useTranslations } from "next-intl";
 
-async function ContactPage({ params: { locale } }) {
+function ContactPage({ params: { locale } }) {
+  const t = useTranslations("default");
   // const globalSettings = await getGlobalSettings(locale);
 
   // const companyEmail = globalSettings?.attributes?.email;
@@ -26,8 +29,8 @@ async function ContactPage({ params: { locale } }) {
                 src="../assets/img/illustration/10.png"
                 alt="Image Not Found"
               />
-              <h5 className="sub-title">Have Questions?</h5>
-              <h2 className="heading">Send us a massage</h2>
+              <h5 className="sub-title">{t("Contact.subtitle")}</h5>
+              <h2 className="heading">{t("Contact.title")}</h2>
               <form className="contact-form contact-form">
                 <div className="row">
                   <div className="col-lg-12">
@@ -36,7 +39,7 @@ async function ContactPage({ params: { locale } }) {
                         className="form-control"
                         id="name"
                         name="name"
-                        placeholder="Name"
+                        placeholder={t("Contact.form_name")}
                         type="text"
                       />
                       <span className="alert-error"></span>
@@ -50,7 +53,7 @@ async function ContactPage({ params: { locale } }) {
                         className="form-control"
                         id="email"
                         name="email"
-                        placeholder="Email*"
+                        placeholder={t("Contact.form_email")}
                         type="email"
                       />
                       <span className="alert-error"></span>
@@ -62,7 +65,7 @@ async function ContactPage({ params: { locale } }) {
                         className="form-control"
                         id="phone"
                         name="phone"
-                        placeholder="Phone"
+                        placeholder={t("Contact.form_phone")}
                         type="text"
                       />
                       <span className="alert-error"></span>
@@ -76,7 +79,7 @@ async function ContactPage({ params: { locale } }) {
                         className="form-control"
                         id="comments"
                         name="comments"
-                        placeholder="Tell Us About Project *"
+                        placeholder={t("Contact.form_message")} //" *"
                       ></textarea>
                     </div>
                   </div>
@@ -84,7 +87,8 @@ async function ContactPage({ params: { locale } }) {
                 <div className="row">
                   <div className="col-lg-12">
                     <button type="button" name="submit" id="submit">
-                      <i className="fa fa-paper-plane"></i> Get in Touch
+                      <i className="fa fa-paper-plane"></i>
+                      {t("Contact.cta")}
                     </button>
                   </div>
                 </div>
@@ -99,9 +103,11 @@ async function ContactPage({ params: { locale } }) {
           <div className="col-tact-stye-one col-xl-5 col-lg-5 pl-80 pl-md-15 pl-xs-15">
             <div className="contact-style-one-info">
               <h2>
-                Contact
+                {t("Contact.contact_info_title")}
+
                 <span>
-                  Information
+                  {t("Contact.contact_info_subtitle")}
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 500 150"
@@ -114,20 +120,23 @@ async function ContactPage({ params: { locale } }) {
                   </svg>
                 </span>
               </h2>
-              <p>
-                Plan upon yet way get cold spot its week. Almost do am or limits
-                hearts. Resolve parties but why she shewing.
-              </p>
+              <p>{t("Contact.contact_info_desc")}</p>
               <ul>
                 <li>
                   <div className="content">
-                    <h5 className="title">Hotline</h5>
+                    <h5 className="title">
+                      {" "}
+                      {t("Contact.contact_info_phone")}
+                    </h5>
                     <a href="#">+971 000 000 000</a>
                   </div>
                 </li>
                 <li>
                   <div className="info">
-                    <h5 className="title">Official Email</h5>
+                    <h5 className="title">
+                      {" "}
+                      {t("Contact.contact_info_email")}
+                    </h5>
                     <a href="mailto:info@madeira.ae">info@madeira.ae</a>
                   </div>
                 </li>

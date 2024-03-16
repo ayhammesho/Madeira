@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Timeline = () => {
+  const t = useTranslations("default");
   return (
     <div
       className="timeline-area default-padding"
@@ -10,19 +13,10 @@ const Timeline = () => {
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <div className="site-heading">
-              <h2 className="title">
-                The company was established <br /> back in 2012
-              </h2>
+              <h2 className="title">{t("About.timeline_title")}</h2>
               <div className="row">
                 <div className="col-xl-10 offset-xl-2">
-                  <p>
-                    The company works in the field of feed The company works
-                    hard to provide the finest types of feed in the United Arab
-                    Emirates and many Arab countries and the Arab Gulf
-                    countries. We also take care of the best quality of our
-                    products We grow fodder on our own farms In Egypt, Pakistan
-                    and America
-                  </p>
+                  <p>{t("About.timeline_desc")}</p>
                 </div>
               </div>
             </div>
@@ -33,26 +27,26 @@ const Timeline = () => {
             <div className="timeline-items">
               {/* <!-- Single Item --> */}
               <div className="timeline-item">
-                <h2>1906</h2>
-                <h4>Open Farm</h4>
+                <h2> {t("About.timeline_year_1")} </h2>
+                <h4>{t("About.timeline_evnet_1")} </h4>
               </div>
               {/* <!-- End Single Item --> */}
               {/* <!-- Single Item --> */}
               <div className="timeline-item">
-                <h2>1920</h2>
-                <h4>Farm Remodelacion</h4>
+                <h2>{t("About.timeline_year_2")} </h2>
+                <h4>{t("About.timeline_evnet_2")} </h4>
               </div>
               {/* <!-- End Single Item --> */}
               {/* <!-- Single Item --> */}
               <div className="timeline-item">
-                <h2>1925</h2>
-                <h4>Grainfarmers Formed</h4>
+                <h2>{t("About.timeline_year_3")} </h2>
+                <h4>{t("About.timeline_evnet_3")} </h4>
               </div>
               {/* <!-- End Single Item --> */}
               {/* <!-- Single Item --> */}
               <div className="timeline-item">
-                <h2>1930</h2>
-                <h4>Start of Agriculture</h4>
+                <h2>{t("About.timeline_year_4")} </h2>
+                <h4>{t("About.timeline_evnet_4")} </h4>
               </div>
               {/* <!-- End Single Item --> */}
             </div>

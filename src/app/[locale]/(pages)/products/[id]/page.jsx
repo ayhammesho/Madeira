@@ -8,6 +8,7 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslations } from "next-intl";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
@@ -24,6 +25,7 @@ SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 // }
 
 function ProductDetailsPage({ params: { locale, id } }) {
+  const t = useTranslations("default");
   const settings = useMemo(() => {
     return {
       // Optional parameters
@@ -247,19 +249,11 @@ function ProductDetailsPage({ params: { locale, id } }) {
                 <div className="product-stock validthemes-in-stock">
                   <span>In Stock</span>
                 </div> */}
-                <p>
-                  we are proud to offer our premium feed products, carefully
-                  crafted to provide your animals with the highest quality
-                  nutrition and support their optimal health and performance. We
-                  understand that your animals are more than just pets or
-                  livestock; they are an integral part of your family and
-                  livelihood. That's why we have dedicated ourselves to creating
-                  feed products that deliver exceptional results.
-                </p>
+                <p>{t("Shop.product_desc_TEST")}</p>
                 <div className="product-estimate-delivary mt-2">
                   <i className="fas fa-box-open"></i>
-                  <strong> 2-day Delivery</strong>
-                  <span>Speedy and reliable parcel delivery!</span>
+                  <strong> {t("Shop.product_box_strong")} </strong>
+                  <span>{t("Shop.product_box_span")}</span>
                 </div>
                 <div className="product-purchase-list mt-4">
                   {/* <input
@@ -274,7 +268,8 @@ function ProductDetailsPage({ params: { locale, id } }) {
                     href="#"
                     className="btn secondary btn-theme btn-sm animation"
                   >
-                    Contact Us
+                    {t("Shop.product_cta")}
+
                     <i className="fas fa-phone ml-2"></i>
                   </a>
                   {/* <div className="shop-action">
@@ -313,7 +308,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                   aria-controls="description-tab"
                   aria-selected="true"
                 >
-                  Description
+                  {t("Shop.product_tab_desc")}
                 </button>
 
                 <button
@@ -326,7 +321,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                   aria-controls="information-tab"
                   aria-selected="false"
                 >
-                  Additional Information
+                  {t("Shop.product_tab_additon_info")}
                 </button>
 
                 {/* <button
@@ -352,24 +347,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                   role="tabpanel"
                   aria-labelledby="description-tab-control"
                 >
-                  <p>
-                    There is immense scope for organic production of vegetable
-                    crops in India since the agricultural sector has enormous
-                    organic resources like crop residues, livestock and other
-                    bio-products from agro industries. Organic farming is
-                    growing at a rapid pace among Indian farmers and
-                    entrepreneurs, particularly in rainfed and hilly areas where
-                    fertilizer consumption is less than 25 kg/ha/year [13].
-                  </p>
-                  <ul>
-                    <li>Status of organic vegetable production</li>
-                    <li>Feasibility of organic practices</li>
-                    <li>Sustainability of organic farming</li>
-                    <li>Organic certification</li>
-                    <li>
-                      Prospects and constraints of organic vegetable production
-                    </li>
-                  </ul>
+                  <p>{t("Shop.product_tab_desc_content_TEST")}</p>
                 </div>
                 {/* <!-- End Single --> */}
 
@@ -384,16 +362,12 @@ function ProductDetailsPage({ params: { locale, id } }) {
                     <table className="table table-bordered">
                       <tbody>
                         <tr>
-                          <td>Weight</td>
+                          <td> {t("Shop.product_tab_weight_TEST")}</td>
                           <td>240 Ton</td>
                         </tr>
                         <tr>
-                          <td>Dimensions</td>
+                          <td>{t("Shop.product_tab_dimeension_TEST")} </td>
                           <td>20 × 30 × 40 cm</td>
-                        </tr>
-                        <tr>
-                          <td>Colors</td>
-                          <td>Black, Blue, Green</td>
                         </tr>
                       </tbody>
                     </table>
@@ -538,7 +512,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
         <div className="related-products carousel-shadow">
           <div className="row">
             <div className="col-md-12">
-              <h3>Related Products</h3>
+              <h3>{t("Shop.product_related_products")}</h3>
               <Swiper
                 {...settings}
                 className="vt-products text-center related-product-carousel swiper"
@@ -550,7 +524,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                     <div className="product">
                       <div className="product-contents">
                         <div className="product-image">
-                          <a href="/en/products/1">
+                          <a href={`/${locale}/products/1`}>
                             <img
                               src="../../assets/img/demo/chook-feed.webp"
                               alt="Product"
@@ -560,7 +534,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <ul>
                               <li className="quick-view">
                                 <a href="#">
-                                  <span>Quick view</span>
+                                  <span>{t("Shop.quick_view")}</span>
                                 </a>
                               </li>
                             </ul>
@@ -572,23 +546,25 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <a href="#">Organic</a>
                           </div>
                           <h4 className="product-title">
-                            <a href="/en/products/1">Alfalfa</a>
+                            <a href={`/${locale}/products/1`}>Alfalfa</a>
                           </h4>
 
-                          <a href="/en/products/1" className="cart-btn">
-                            <i className="fas fa-eye"></i> View Product
+                          <a
+                            href={`/${locale}/products/1`}
+                            className="cart-btn"
+                          >
+                            <i className="fas fa-eye"></i>
+                            {t("Shop.cta")}
                           </a>
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
-                  {/* <!-- Single product --> */}
-                  {/* <!-- Single product --> */}
                   <SwiperSlide className="swiper-slide">
                     <div className="product">
                       <div className="product-contents">
                         <div className="product-image">
-                          <a href="/en/products/1">
+                          <a href={`/${locale}/products/1`}>
                             <img
                               src="../../assets/img/demo/chook-feed.webp"
                               alt="Product"
@@ -598,7 +574,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <ul>
                               <li className="quick-view">
                                 <a href="#">
-                                  <span>Quick view</span>
+                                  <span>{t("Shop.quick_view")}</span>
                                 </a>
                               </li>
                             </ul>
@@ -610,23 +586,25 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <a href="#">Organic</a>
                           </div>
                           <h4 className="product-title">
-                            <a href="/en/products/1">Alfalfa</a>
+                            <a href={`/${locale}/products/1`}>Alfalfa</a>
                           </h4>
 
-                          <a href="/en/products/1" className="cart-btn">
-                            <i className="fas fa-eye"></i> View Product
+                          <a
+                            href={`/${locale}/products/1`}
+                            className="cart-btn"
+                          >
+                            <i className="fas fa-eye"></i>
+                            {t("Shop.cta")}
                           </a>
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
-                  {/* <!-- Single product --> */}
-                  {/* <!-- Single product --> */}
                   <SwiperSlide className="swiper-slide">
                     <div className="product">
                       <div className="product-contents">
                         <div className="product-image">
-                          <a href="/en/products/1">
+                          <a href={`/${locale}/products/1`}>
                             <img
                               src="../../assets/img/demo/chook-feed.webp"
                               alt="Product"
@@ -636,7 +614,7 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <ul>
                               <li className="quick-view">
                                 <a href="#">
-                                  <span>Quick view</span>
+                                  <span>{t("Shop.quick_view")}</span>
                                 </a>
                               </li>
                             </ul>
@@ -648,18 +626,20 @@ function ProductDetailsPage({ params: { locale, id } }) {
                             <a href="#">Organic</a>
                           </div>
                           <h4 className="product-title">
-                            <a href="/en/products/1">Alfalfa</a>
+                            <a href={`/${locale}/products/1`}>Alfalfa</a>
                           </h4>
 
-                          <a href="/en/products/1" className="cart-btn">
-                            <i className="fas fa-eye"></i> View Product
+                          <a
+                            href={`/${locale}/products/1`}
+                            className="cart-btn"
+                          >
+                            <i className="fas fa-eye"></i>
+                            {t("Shop.cta")}
                           </a>
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
-                  {/* <!-- Single product --> */}
-                  {/* <!-- Single product --> */}
 
                   {/* <!-- Single product --> */}
                 </div>

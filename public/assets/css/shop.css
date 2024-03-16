@@ -3534,3 +3534,43 @@ body.dark-layout .banner-area .box-banner .btn-theme.effect:hover {
   color: var(--white);
   background: var(--color-secondary);
 }
+
+.product-tags a:lang(ar) {
+  
+  margin-right: 0px;
+margin-left: 5px
+}
+
+.product-tags a:lang(ar)::after {
+  /* position: absolute; */
+  left: -4px;
+  right: auto;
+  bottom: 0;
+  /* content: ","; */
+}
+
+.single-product-bottom-info .tab-content.tab-content-info .tab-pane ul li:lang(ar) {  display: block;
+  padding: 0;
+
+  padding-right: 20px;
+
+}
+
+.single-product-bottom-info
+  .tab-content.tab-content-info
+  .tab-pane
+  ul
+  li:lang(ar)::after {
+ 
+  right: 0;
+  left: auto;
+  top: 0;
+
+}
+
+@media only screen and (max-width: 767px) {
+ .product-purchase-list:lang(ar) input,
+  .product-purchase-list > a.btn,
+  .product-purchase-list .shop-action {
+    float: right;
+    }}

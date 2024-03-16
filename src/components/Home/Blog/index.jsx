@@ -32,8 +32,8 @@ function index({ blogData, lang }) {
         <div className="row">
           <div className="col-lg-8 offset-lg-2">
             <div className="site-heading text-center">
-              <h5 className="sub-title">Latest News</h5>
-              <h2 className="title">Check out our blog posts </h2>
+              <h5 className="sub-title">{t("Home.blog_subtitle")}</h5>
+              <h2 className="title">{t("Home.blog_title")}</h2>
             </div>
           </div>
         </div>
@@ -47,17 +47,11 @@ function index({ blogData, lang }) {
                 <img src="assets/img/blog/1.jpg" alt="Image Not Found" />
                 <div className="overlay text-light">
                   <h3 className="post-title">
-                    <a href="en/news">
-                      Miscovery incommode earnestly commanded if.
-                    </a>
+                    <a href={`${lang}/news`}>{t("Home.blog_article_1")}</a>
                   </h3>
-                  <p>
-                    Seeing rather her you not esteem men settle genius excuse.
-                    Deal say over you age from. Comparison new ham melancholy
-                    son themselves.
-                  </p>
-                  <a href="en/news" className="button-regular">
-                    Continue Reading <i className="fas fa-arrow-right"></i>
+                  <p>{t("Home.blog_article_desc_1")}</p>
+                  <a href={`${lang}/news`} className="button-regular">
+                    {t("Home.blog_cta")} <i className="fas fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
@@ -68,7 +62,7 @@ function index({ blogData, lang }) {
           <div className="col-xl-3 col-md-6 mb-30">
             <div className="blog-style-one">
               <div className="thumb">
-                <a href="en/news">
+                <a href={`${lang}/about-us`}>
                   <img src="assets/img/blog/3.jpg" alt="Image Not Found" />
                 </a>
                 <div className="date">
@@ -85,12 +79,10 @@ function index({ blogData, lang }) {
                   </ul>
                 </div>
                 <h3 className="post-title">
-                  <a href="en/news">
-                    Expression acceptance imprudence particular
-                  </a>
+                  <a href={`${lang}/news`}>{t("Home.blog_article_2")}</a>
                 </h3>
-                <a href="en/news" className="button-regular">
-                  Continue Reading <i className="fas fa-arrow-right"></i>
+                <a href={`${lang}/news`} className="button-regular">
+                  {t("Home.blog_cta")} <i className="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -100,7 +92,7 @@ function index({ blogData, lang }) {
           <div className="col-xl-3 col-md-6 mb-30">
             <div className="blog-style-one">
               <div className="thumb">
-                <a href="en/news">
+                <a href={`${lang}/news`}>
                   <img src="assets/img/blog/2.jpg" alt="Image Not Found" />
                 </a>
                 <div className="date">
@@ -117,12 +109,10 @@ function index({ blogData, lang }) {
                   </ul>
                 </div>
                 <h3 className="post-title">
-                  <a href="en/news">
-                    Considered imprudence of technical friendship.
-                  </a>
+                  <a href={`${lang}/news`}>{t("Home.blog_article_3")}</a>
                 </h3>
-                <a href="en/news" className="button-regular">
-                  Continue Reading <i className="fas fa-arrow-right"></i>
+                <a href={`${lang}/news`} className="button-regular">
+                  {t("Home.blog_cta")} <i className="fas fa-arrow-right"></i>
                 </a>
               </div>
             </div>

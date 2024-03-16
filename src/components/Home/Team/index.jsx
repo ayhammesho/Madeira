@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useMemo } from "react";
 import SwiperCore, {
   Autoplay,
@@ -16,7 +17,8 @@ import Farmer3 from "@/../public/assets/img/farmers/3.jpg";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
-const index = ({ className }) => {
+const index = ({ className, lang }) => {
+  const t = useTranslations("default");
   const settings = useMemo(() => {
     return {
       // Optional parameters
@@ -50,18 +52,19 @@ const index = ({ className }) => {
       }
     >
       <div className="container">
-        <div className="row align-center">
+        <div className="row align-center justify-content-around">
           <div className="col-lg-4">
-            <h4 className="sub-title">Our Team</h4>
-            <h2 className="title">Meet our professional Feed experts</h2>
+            <h4 className="sub-title">{t("About.team_subtitle")}</h4>
+            <h2 className="title">{t("About.team_title")} </h2>
             <a
               className="btn btn-theme secondary mt-10 btn-md radius animation"
-              href="en/contact"
+              href={`${lang}/contact`}
             >
-              Contact Us
+              {t("About.team_cta")}
             </a>
           </div>
-          <div className="col-lg-7 offset-lg-1">
+          {/* <div className="col-lg-7 offset-lg-1"> */}
+          <div className="col-lg-7 ">
             <Swiper {...settings} className="team-style-one-carousel swiper">
               {/* <!-- Additional required wrapper --> */}
               <div className="swiper-wrapper">
@@ -94,7 +97,7 @@ const index = ({ className }) => {
                     <div className="info">
                       {/* <span>Farmer of tomatoes</span> */}
                       <h4>
-                        <a href="farmer-details.html">Aleesha Brown</a>
+                        <a href="#">{t("About.team_member_1")} </a>
                       </h4>
                     </div>
                   </div>
@@ -129,7 +132,7 @@ const index = ({ className }) => {
                     <div className="info">
                       {/* <span>Farmer of cherry</span> */}
                       <h4>
-                        <a href="farmer-details.html">Kevin Martin</a>
+                        <a href="#">{t("About.team_member_2")} </a>
                       </h4>
                     </div>
                   </div>
@@ -164,7 +167,7 @@ const index = ({ className }) => {
                     <div className="info">
                       {/* <span>Farmer of potato</span> */}
                       <h4>
-                        <a href="farmer-details.html">Sarah Albert</a>
+                        <a href="#">{t("About.team_member_3")} </a>
                       </h4>
                     </div>
                   </div>

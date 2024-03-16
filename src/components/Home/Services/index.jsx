@@ -10,9 +10,12 @@ import SwiperCore, {
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
+import { useTranslations } from "next-intl";
+
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const Services = () => {
+  const t = useTranslations("default");
   const settings = useMemo(() => {
     return {
       // Optional parameters
@@ -48,7 +51,7 @@ const Services = () => {
                 className="mask-text large"
                 style={{ backgroundImage: "url(assets/img/banner/18.jpg)" }}
               >
-                Healthy life with fresh products
+                {t("Home.services_title")}
               </h2>
             </div>
           </div>
@@ -79,9 +82,9 @@ const Services = () => {
                       </div>
                       <div className="info">
                         <h4>
-                          <a href="services-details.html">Agriculture</a>
+                          <a href="#"> {t("Home.services_type_1")} </a>
                         </h4>
-                        <span>Products</span>
+                        <span> {t("Home.services_category_1")}</span>
                       </div>
                     </div>
                   </div>
@@ -134,9 +137,11 @@ const Services = () => {
                       </div>
                       <div className="info">
                         <h4>
-                          <a href="services-details.html">Dairy</a>
+                          <a href="services-details.html">
+                            {t("Home.services_type_2")}{" "}
+                          </a>
                         </h4>
-                        <span>Products</span>
+                        <span> {t("Home.services_category_2")}</span>
                       </div>
                     </div>
                   </div>

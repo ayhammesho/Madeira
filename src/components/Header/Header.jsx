@@ -11,9 +11,9 @@ import Script from "next/script";
 
 import logoWhite from "@/../public/assets/img/logo-white.png";
 import logo from "@/../public/assets/img/logo.png";
+import ar from "../../../public/assets/img/demo/ar.svg";
+import en from "../../../public/assets/img/demo/en.svg";
 
-// import ar from "../../../public/assets/img/demo/ar.svg";
-// import en from "../../../public/assets/img/demo/en.svg";
 import { useTranslations } from "next-intl";
 
 const initialState = {
@@ -59,22 +59,18 @@ function Header({ lang, HeaderLogo, categories }) {
   const t = useTranslations("default");
   const [state, dispatch] = useReducer(reducer, initialState);
   const headerRef = useRef(null);
-  const handleScroll = () => {
-    const { scrollY } = window;
-    dispatch({ type: "setScrollY", payload: scrollY });
-  };
   const currentRoute = useRouter().pathname;
 
-  // const locales = [
-  //   {
-  //     key: "en",
-  //     icon: en,
-  //   },
-  //   {
-  //     key: "ar",
-  //     icon: ar,
-  //   },
-  // ];
+  const locales = [
+    {
+      key: "en",
+      icon: en,
+    },
+    {
+      key: "ar",
+      icon: ar,
+    },
+  ];
   const pathName = usePathname();
 
   const redirectedPathName = (locale) => {
@@ -152,6 +148,45 @@ function Header({ lang, HeaderLogo, categories }) {
                 <Link legacyBehavior href={`/${lang}/news`}>
                   {t("Header.blog")}
                 </Link>
+              </li>
+
+              <li className="d-block d-lg-none">
+                <Link legacyBehavior href={`/${lang}/contact`}>
+                  {t("Header.contact_us")}
+                </Link>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 21q-1.858 0-3.5-.71t-2.86-1.93q-1.22-1.217-1.93-2.86Q3 13.858 3 12q0-1.863.71-3.503q.711-1.64 1.93-2.858Q6.857 4.421 8.5 3.711Q10.142 3 12 3q1.863 0 3.503.71q1.64.711 2.858 1.93q1.218 1.218 1.928 2.857Q21 10.137 21 12q0 1.858-.71 3.5t-1.93 2.86q-1.218 1.219-2.857 1.93Q13.863 21 12 21m0-.992q.88-1.131 1.452-2.221q.571-1.09.929-2.44H9.619q.396 1.426.948 2.516q.552 1.09 1.433 2.145m-1.273-.15q-.7-.825-1.278-2.04q-.578-1.214-.86-2.472H4.753q.86 1.866 2.437 3.06q1.578 1.194 3.536 1.452m2.546 0q1.958-.258 3.536-1.452t2.437-3.06h-3.834q-.38 1.277-.957 2.492q-.578 1.214-1.182 2.02m-8.927-5.512H8.38q-.114-.615-.16-1.199q-.048-.584-.048-1.147q0-.563.047-1.147q.047-.584.16-1.2H4.347q-.163.52-.255 1.133T4 12q0 .602.091 1.214q.092.613.255 1.132m5.035 0h5.238q.114-.615.16-1.18q.048-.564.048-1.166t-.047-1.166q-.047-.565-.16-1.18H9.38q-.113.615-.16 1.18q-.047.564-.047 1.166t.047 1.166q.047.565.16 1.18m6.24 0h4.034q.163-.52.255-1.132T20 12q0-.602-.091-1.214q-.092-.613-.255-1.132h-4.035q.114.615.16 1.199q.048.584.048 1.147q0 .563-.047 1.147q-.047.584-.16 1.2m-.208-5.693h3.834q-.879-1.904-2.408-3.06q-1.53-1.156-3.565-1.47q.7.92 1.259 2.106q.558 1.185.88 2.424m-5.793 0h4.762q-.396-1.408-.977-2.546q-.58-1.139-1.404-2.116q-.823.977-1.404 2.116q-.58 1.138-.977 2.546m-4.865 0h3.834q.322-1.239.88-2.424q.559-1.186 1.259-2.107q-2.054.315-3.574 1.48q-1.52 1.166-2.4 3.05"
+                    />
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  {locales.map((locale, index) => (
+                    <li key={index}>
+                      <Link
+                        className="d-flex flex-wrap align-items-center justify-content-between fw-bold gap-2 fs-24"
+                        href={redirectedPathName(locale.key)}
+                      >
+                        {locale.key}
+                        <img
+                          className="flag-img"
+                          width={35}
+                          src={locale.icon.src}
+                          alt={`${locale.key} flag`}
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
             </ul>
           </div>

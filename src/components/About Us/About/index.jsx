@@ -4,8 +4,10 @@ import $ from "jquery";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 const About = () => {
+  const t = useTranslations("default");
   useEffect(() => {
     // Jquery Apear
     $.fn.appear = function (fn, options) {
@@ -284,19 +286,11 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="col-xl-5 offset-xl-1 col-lg-6 offset-lg-1">
+          {/* <div className="col-xl-5 offset-xl-1 col-lg-6 offset-lg-1"> */}
+          <div className="col-xl-5  col-lg-6 justify-content-around">
             <div className="about-style-one-info">
-              <h2 className="title">
-                Cultivating Excellence for a Bountiful <br /> Harvest
-              </h2>
-              <p>
-                Whether you're a large-scale farmer, a small-scale gardener, or
-                somewhere in between, we have a diverse range of seeds to meet
-                your specific needs. From staple crops like corn, wheat, and
-                soybeans to specialty crops like heirloom tomatoes, exotic
-                peppers, and aromatic herbs, our extensive catalog offers a wide
-                selection to suit every farmer's requirements.
-              </p>
+              <h2 className="title">{t("About.about_title")}</h2>
+              <p>{t("About.about_desc")}</p>
               <div className="fun-fact-style-flex mt-35">
                 <div className="counter">
                   <div className="timer" data-to="25" data-speed="2000">
@@ -304,9 +298,7 @@ const About = () => {
                   </div>
                   <div className="operator">M</div>
                 </div>
-                <span className="medium">
-                  Growth Tonns <br /> of Products
-                </span>
+                <span className="medium">{t("About.about_counter_title")}</span>
               </div>
               <ul className="top-feature">
                 <li>
@@ -314,8 +306,8 @@ const About = () => {
                     <img src="../assets/img/icon/3.png" alt="Image Not Found" />
                   </div>
                   <div className="info">
-                    <h4>100% Guaranteed Organic Product</h4>
-                    <p>Always parties but trying she shewing of moment.</p>
+                    <h4> {t("About.about_feature_title_1")}</h4>
+                    <p>{t("About.about_feature_desc_1")}</p>
                   </div>
                 </li>
                 <li>
@@ -323,11 +315,8 @@ const About = () => {
                     <img src="../assets/img/icon/2.png" alt="Image Not Found" />
                   </div>
                   <div className="info">
-                    <h4>Top-Quality Healthy Foods Production</h4>
-                    <p>
-                      Majority have suffered alteration in some form by injected
-                      humor.
-                    </p>
+                    <h4>{t("About.about_feature_title_2")}</h4>
+                    <p>{t("About.about_feature_desc_2")}</p>
                   </div>
                 </li>
               </ul>

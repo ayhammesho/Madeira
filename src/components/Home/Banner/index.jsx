@@ -9,9 +9,11 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
-function index({}) {
+function index({ lang }) {
+  const t = useTranslations("default");
   const settings = useMemo(() => {
     return {
       // Optional parameters
@@ -56,22 +58,18 @@ function index({}) {
               style={{ background: "url(assets/img/demo/Banner-1.jpg)" }}
             ></div>
             <div className="container">
-              <div className="row align-center">
-                <div className="col-lg-8 offset-lg-2">
+              <div className="row align-center justify-content-center">
+                <div className="col-lg-8 ">
                   <div className="content">
                     <h2>
-                      Feed <strong>Company</strong>
+                      {t("Home.banner_title_1")}{" "}
+                      <strong>{t("Home.banner_second_title_1")}</strong>
                     </h2>
-                    <p>
-                      At Madeira Feeds, we understand that your pets are more
-                      than just animals; they are cherished members of your
-                      family. That's why we are committed to providing the
-                      highest quality feeds and products to keep them healthy,
-                      vibrant, and full of life.
-                    </p>
+                    <p>{t("Home.banner_desc_1")}</p>
                     <div className="button">
-                      <a className="animated-btn" href="en/about-us">
-                        <i className="fas fa-angle-right"></i> Discover More
+                      <a className="animated-btn" href={`${lang}/about-us`}>
+                        <i className="fas fa-angle-right"></i>
+                        {t("Home.banner_cta_1")}
                       </a>
                     </div>
                   </div>
@@ -89,23 +87,18 @@ function index({}) {
               style={{ background: "url(assets/img/demo/Banner-2.jpg)" }}
             ></div>
             <div className="container">
-              <div className="row align-center">
-                <div className="col-lg-8 offset-lg-2">
+              <div className="row align-center justify-content-center">
+                <div className="col-lg-8 ">
                   <div className="content">
                     <h2>
-                      Best <strong>Products</strong>
+                      {t("Home.banner_title_2")}{" "}
+                      <strong>{t("Home.banner_second_title_1")} </strong>
                     </h2>
-                    <p>
-                      We take pride in offering a wide range of carefully
-                      crafted feed options that cater to the unique needs of
-                      different animals. Whether you have a playful pup, a
-                      graceful feline, or a magnificent equine companion, we
-                      have the perfect feed to meet their nutritional
-                      requirements.
-                    </p>
+                    <p>{t("Home.banner_desc_1")}</p>
                     <div className="button">
-                      <a className="animated-btn" href="en/products">
-                        <i className="fas fa-angle-right"></i> Explore Now
+                      <a className="animated-btn" href={`${lang}/about-us`}>
+                        <i className="fas fa-angle-right"></i>
+                        {t("Home.banner_cta_2")}
                       </a>
                     </div>
                   </div>
@@ -117,8 +110,8 @@ function index({}) {
         </div>
 
         {/* <!-- Navigation --> */}
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev banner-prev-button"></div>
+        <div className="swiper-button-next banner-next-button"></div>
       </Swiper>
     </div>
   );

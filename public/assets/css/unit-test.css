@@ -1749,3 +1749,30 @@ a.button-regular:hover i::after {
 		margin-top: 15px;
 	}
 }
+
+.post-author img:lang(ar) {
+
+	margin-left: 30px;
+	margin-rigth: 0px;
+}
+
+.post-tags.share .social h4:lang(ar) {
+
+	margin-left: 5px;
+	margin-right: 0px;
+}
+
+.blog-style-one .button-regular:lang(ar) {
+  display: flex;
+  align-items: center;
+
+}
+
+a.button-regular i:lang(ar) {
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+.fa-arrow-right:lang(ar):before {
+    content: "\f060";
+}

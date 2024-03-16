@@ -3,11 +3,13 @@
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { useState, useEffect } from "react";
 import { getGlobalSettings } from "../libs/getData";
+import { usePathname } from "next/navigation";
 import $ from "jquery";
 
 // import logo from "../../../public/assets/img/LOGO_cutted.png";
 
 export function WhatsAppProvider({ lang, children }) {
+  const pathName = usePathname();
   const [isLoading, setIsLoading] = useState(true);
   // const [whatsAppData, setWhatsAppData] = useState({});
 
@@ -24,7 +26,7 @@ export function WhatsAppProvider({ lang, children }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 10000);
 
     var validnavs = {
       initialize: function () {
@@ -676,7 +678,7 @@ export function WhatsAppProvider({ lang, children }) {
         $(".navbar-sticky").removeClass("sticked");
       }
     });
-  }, []);
+  }, [lang, pathName]);
 
   return (
     <div>

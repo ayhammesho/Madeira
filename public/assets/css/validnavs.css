@@ -56,6 +56,7 @@ Version: 1.0
 .navbar .container-sm,
 .navbar .container-xl {
   display: block;
+  font-family: var(--font-default) !important;
 }
 
 .navbar {
@@ -260,6 +261,10 @@ Version: 1.0
   overflow: hidden;
   margin-left: 5px;
   border: 2px solid var(--color-primary);
+}
+
+.navbar .attr-right .attr-nav li.button a:hover {
+  color: var(--white) !important;
 }
 
 .navbar .attr-right .attr-nav li.button.secondary a {
@@ -1586,7 +1591,8 @@ nav.navbar.validnavs.brand-center {
     border-radius: 2px;
     box-shadow: var(--box-shadow-extra);
     padding: 20px;
-    width: 300px;
+    /* I EDIT THis */
+    width: auto;
   }
 
   nav.navbar.validnavs li.dropdown ul.dropdown-menu.cart-list {
@@ -1750,6 +1756,13 @@ nav.navbar.validnavs.brand-center {
   nav.navbar.validnavs.no-background.white .attr-right .attr-nav li.button a {
     border-color: var(--color-primary);
   }
+  nav.navbar.validnavs.no-background.white
+    .attr-right
+    .attr-nav
+    li.button
+    a:hover {
+    color: var(--white) !important;
+  }
 
   nav.navbar.validnavs.on ul.dropdown-menu.megamenu-content .content {
     display: block !important;
@@ -1795,7 +1808,7 @@ nav.navbar.validnavs.brand-center {
   nav.navbar.validnavs.navbar-transparent.white .attr-nav > ul > li > a,
   nav.navbar.validnavs.navbar-transparent.white ul.nav > li > a,
   nav.navbar.validnavs.no-background.white ul.nav > li > a {
-    color: var(--white) !important;
+    color: var(--white);
   }
 
   nav.navbar.validnavs.no-background.white .attr-nav > ul > li > a::after {
@@ -3565,6 +3578,11 @@ nav.navbar.validnavs.mobile-sidenav
 nav.navbar.validnavs .navbar-collapse.collapse img {
   display: none;
 }
+nav.navbar.validnavs .navbar-collapse.collapse .flag-img {
+  display: inline-block;
+  width: 25px;
+  margin: 0;
+}
 
 nav.navbar.validnavs .navbar-collapse.collapse img {
   margin-bottom: 30px;
@@ -3679,6 +3697,11 @@ nav.navbar.validnavs .navbar-collapse.collapse button i {
   nav.navbar.validnavs .navbar-collapse.collapse.show img {
     display: inline-block;
     height: 90px;
+  }
+
+  nav.navbar.validnavs .navbar-collapse.collapse.show .flag-img {
+    height: auto;
+    margin-bottom: 0px;
   }
 
   nav.navbar.validnavs .navbar-collapse.collapse img {
@@ -3922,4 +3945,26 @@ nav.navbar.mobile-sidenav.less-logo {
     border-radius: 50%;
     margin-right: 10px;
   }
+}
+
+nav.navbar.validnavs.mobile-sidenav
+  .navbar-collapse.collapse.collapse-mobile:lang(ar) {
+  right: -485px;
+  left: auto;
+  top: 0;
+}
+
+nav.navbar.validnavs .navbar-collapse.collapse.collapse-mobile.show:lang(ar) {
+  right: 0;
+  left: auto;
+}
+
+nav.navbar.validnavs .navbar-collapse.collapse button {
+  left: 30px;
+  right: auto;
+}
+
+nav.navbar.validnavs ul.nav > li.dropdown > a.dropdown-toggle:lang(ar)::after {
+  margin-right: 7px;
+  margin-left: 0px;
 }
