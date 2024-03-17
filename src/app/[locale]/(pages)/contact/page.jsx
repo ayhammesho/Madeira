@@ -103,8 +103,7 @@ function ContactPage({ params: { locale } }) {
           <div className="col-tact-stye-one col-xl-5 col-lg-5 pl-80 pl-md-15 pl-xs-15">
             <div className="contact-style-one-info">
               <h2>
-                {t("Contact.contact_info_title")}
-
+                {t("Contact.contact_info_title")}{" "}
                 <span>
                   {t("Contact.contact_info_subtitle")}
 
@@ -128,7 +127,9 @@ function ContactPage({ params: { locale } }) {
                       {" "}
                       {t("Contact.contact_info_phone")}
                     </h5>
-                    <a href="#">+971 000 000 000</a>
+                    <a dir="ltr" href="#">
+                      +971 000 000 000
+                    </a>
                   </div>
                 </li>
                 <li>

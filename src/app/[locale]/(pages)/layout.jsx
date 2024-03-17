@@ -25,7 +25,7 @@ export default async function PagesLayout({ children, params: { locale } }) {
   const MapLink = globalSettings?.attributes?.MapLink;
 
   return (
-    <div>
+    <>
       <Header
         lang={locale}
         HeaderLogo={HeaderLogo}
@@ -44,6 +44,6 @@ export default async function PagesLayout({ children, params: { locale } }) {
         FooterSlogan={FooterSlogan}
         MapLink={MapLink}
       />
-    </div>
+    </>
   );
 }

@@ -1,14 +1,11 @@
 "use client";
 
 // import { getAboutPageData, getTestimonials } from "@/app/libs/getData";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-import Script from "next/script";
+
 import About from "@/components/About Us/About/index";
 import Timeline from "@/components/Home/Timeline";
 import Team from "@/components/Home/Team";
 import ChooseUs from "@/components/About Us/ChooseUs";
-import MapChart from "@/components/MapChart/MapChart";
 
 // export async function generateMetadata({ params: { locale } }) {
 //   const aboutPageData = await getAboutPageData(locale);

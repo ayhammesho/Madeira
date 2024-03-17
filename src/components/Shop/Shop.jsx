@@ -1,7 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 
-const Shop = () => {
+const Shop = ({ lang }) => {
   const t = useTranslations("default");
   return (
     <div className="validtheme-shop-area default-padding">
@@ -96,10 +96,10 @@ const Shop = () => {
                           <a href="#">Organic</a>
                         </div>
                         <h4 className="product-title">
-                          <a href={`/${locale}/products/1`}>Alfalfa</a>
+                          <a href={`/${lang}/products/1`}>Alfalfa</a>
                         </h4>
 
-                        <a href={`/${locale}/products/1`} className="cart-btn">
+                        <a href={`/${lang}/products/1`} className="cart-btn">
                           <i className="fas fa-eye"></i>
                           {t("Shop.cta")}
                         </a>
@@ -126,7 +126,7 @@ const Shop = () => {
                       <div className="row align-center">
                         <div className="col-lg-5 col-md-5">
                           <div className="product-image">
-                            <a href={`/${locale}/products/1`}>
+                            <a href={`/${lang}/products/1`}>
                               <img
                                 src="../assets/img/demo/chook-feed.webp"
                                 alt="Product"
@@ -141,11 +141,11 @@ const Shop = () => {
                               <a href="#">Organic</a>
                             </div>
                             <h4 className="product-title">
-                              <a href={`/${locale}/products/1`}>Alfalfa</a>
+                              <a href={`/${lang}/products/1`}>Alfalfa</a>
                             </h4>
 
                             <a
-                              href={`/${locale}/products/1`}
+                              href={`/${lang}/products/1`}
                               className="cart-btn"
                             >
                               <i className="fas fa-eye"></i> {t("Shop.cta")}

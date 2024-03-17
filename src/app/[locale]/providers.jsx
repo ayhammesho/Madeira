@@ -198,28 +198,6 @@ export function WhatsAppProvider({ lang, children }) {
         }
 
         // ------------------------------------------------------------------------------ //
-        // Button Cart
-        // ------------------------------------------------------------------------------ //
-        $(".btn-cart").on("click", function (e) {
-          e.stopPropagation();
-        });
-
-        // ------------------------------------------------------------------------------ //
-        // Toggle Search
-        // ------------------------------------------------------------------------------ //
-        $("nav.navbar.validnavs .attr-nav").each(function () {
-          $("li.search > a", this).on("click", function (e) {
-            e.preventDefault();
-            $(".top-search").slideToggle();
-            $(".navbar").toggleClass("pause-sticked");
-          });
-        });
-        $(".input-group-addon.close-search").on("click", function () {
-          $(".top-search").slideUp();
-          $(".navbar").removeClass("pause-sticked");
-        });
-
-        // ------------------------------------------------------------------------------ //
         // Toggle Side Menu
         // ------------------------------------------------------------------------------ //
         $("nav.navbar.validnavs .attr-nav").each(function () {
@@ -240,7 +218,7 @@ export function WhatsAppProvider({ lang, children }) {
         // ------------------------------------------------------------------------------ //
         // Wrapper
         // ------------------------------------------------------------------------------ //
-        $("body").wrapInner("<div class='wrapper'></div>");
+        // $("body").wrapInner("<div class='wrapper'></div>");
       },
 
       // ------------------------------------------------------------------------------ //
@@ -645,10 +623,16 @@ export function WhatsAppProvider({ lang, children }) {
       },
     };
 
-    // Initialize
-    $(document).ready(function () {
+    if (typeof window !== "undefined") {
+      // browser code
       validnavs.initialize();
-    });
+    }
+    // setTimeout(() => {
+
+    //   console.log("hi");
+    // }, 5000);
+    // // Initialize
+    // $(document).ready(function () {});
 
     // Reset on resize
     $(window).on("resize", function () {
@@ -667,6 +651,7 @@ export function WhatsAppProvider({ lang, children }) {
 
     // Sticky Header Js
     $(window).on("scroll", function () {
+      validnavs.hoverDropdown();
       var Width = $(document).width();
       var scroll = $(window).scrollTop();
 
@@ -678,7 +663,7 @@ export function WhatsAppProvider({ lang, children }) {
         $(".navbar-sticky").removeClass("sticked");
       }
     });
-  }, [lang, pathName]);
+  }, [pathName]);
 
   return (
     <div>

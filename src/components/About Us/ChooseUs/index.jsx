@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 
-import MapChart from "@/components/MapChart/MapChart";
 import { useTranslations } from "next-intl";
 
 const ChooseUs = () => {

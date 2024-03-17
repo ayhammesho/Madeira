@@ -48,7 +48,7 @@ import Gallery from "@/components/Home/Gallery";
 
 function HomePage({ params: { locale } }) {
   return (
-    <div>
+    <>
       <Header lang={locale} />
 
       {/* <!-- Start Banner Area 
@@ -104,7 +104,7 @@ function HomePage({ params: { locale } }) {
         // FooterSlogan={FooterSlogan}
         // MapLink={MapLink}
       />
-    </div>
+    </>
   );
 }
 
